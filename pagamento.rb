@@ -3,12 +3,12 @@ module Pagamento
 
 def pagar(valor_final)
   puts "Deseja pagar com cartão? (S/N)"
-  opcao - gets.chomp
+  opcao = gets.chomp
 
   if opcao == "S"
     puts "Pagando com cartão"
 
-  else opcao == "N"
+  else
     puts "Pagando com dinheiro"
   end
 end
@@ -16,7 +16,7 @@ end
 class Pagseguro
   def initialize
     puts "Usando Pagseguro"
-    end
+  end
  end
 end
 

@@ -5,7 +5,7 @@ class Venda
   include Pagamento
   include Frete
 
-  PRODUTOS = { "PS3" => 900.00, "PS4" => 1600.00 }
+  PRODUTOS = {"PS3" => 900.00, "PS4" => 1600.00 }
 
   def imprimir_produtos
     puts "--- Produtos ---"
@@ -15,9 +15,9 @@ class Venda
     end
 
     puts "-----------"
-    end
+  end
 
-  def vender"
+  def vender
    puts "Olá! Seja bem vindo"
    puts "O que deseja comprar?"
 
@@ -31,7 +31,6 @@ class Venda
    imprimir_tabela_frete
 
    puts "> Digite o estado.."
-
    uf = gets.chomp
 
    puts "Calculando..."
@@ -46,7 +45,7 @@ class Venda
     pagseguro = Pagamento::Pagseguro.new
     pagar(valor_final)
    else
-   puts "Ok! Fica pra proxima!! :("
+    puts "Ok! Fica pra proxima!! :("
    end
   end
 end
